@@ -1,0 +1,35 @@
+.container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.container div {
+  height: 100%;
+  white-space: nowrap;
+  animation: scrolling 10s linear infinite;
+  animation-delay: 1s;
+}
+
+@media screen and (min-width: 768px) {
+  .container div {
+    animation: scrolling 15s linear infinite;
+    animation-delay: 1s;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container div {
+    animation: scrolling 15s linear infinite;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,393 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*background*/
+    --background: var(--tertiary-white-100);
+
+    /* Primary Colors normal green*/
+    --primary-50: hsl(133, 53%, 97%);
+    --primary-100: hsl(135, 63%, 93%);
+    --primary-200: hsl(135, 58%, 85%);
+    --primary-300: hsl(136, 58%, 73%);
+    --primary-400: hsl(136, 51%, 58%);
+    --primary-500: hsl(136, 53%, 43%);
+    --primary-600: hsl(136, 57%, 36%);
+    --primary-700: hsl(136, 53%, 29%);
+    --primary-800: hsl(136, 48%, 24%);
+    --primary-900: hsl(138, 46%, 20%);
+    --primary-950: hsl(139, 61%, 10%);
+
+    /* Secondary Colors normal yellow */
+    --secondary-50: hsl(57, 92%, 95%);
+    --secondary-100: hsl(57, 97%, 88%);
+    --secondary-200: hsl(55, 98%, 77%);
+    --secondary-300: hsl(53, 98%, 65%);
+    --secondary-400: hsl(50, 96%, 53%);
+    --secondary-500: hsl(48, 93%, 47%);
+    --secondary-600: hsl(43, 96%, 40%);
+    --secondary-700: hsl(37, 92%, 33%);
+    --secondary-800: hsl(34, 81%, 29%);
+    --secondary-900: hsl(30, 73%, 26%);
+    --secondary-950: hsl(28, 83%, 14%);
+    /* Tertiary Colors: Deep Green */
+    --tertiary-deep-green-100: hsl(98, 64%, 89%);
+    --tertiary-deep-green-200: hsl(98, 62%, 80%);
+    --tertiary-deep-green-300: hsl(100, 58%, 67%);
+    --tertiary-deep-green-400: hsl(101, 54%, 55%);
+    --tertiary-deep-green-500: hsl(102, 56%, 44%);
+    --tertiary-deep-green-600: hsl(103, 59%, 35%);
+    --tertiary-deep-green-700: hsl(103, 54%, 27%);
+    --tertiary-deep-green-800: hsl(105, 48%, 23%);
+    --tertiary-deep-green-900: hsl(106, 42%, 20%);
+    --tertiary-deep-green-950: hsl(107, 56%, 10%);
+
+    /* Tertiary Colors: Blue */
+    --tertiary-blue-100: hsl(203, 81%, 94%);
+    --tertiary-blue-200: hsl(201, 80%, 86%);
+    --tertiary-blue-300: hsl(199, 80%, 74%);
+    --tertiary-blue-400: hsl(198, 78%, 64%);
+    --tertiary-blue-500: hsl(198, 74%, 48%);
+    --tertiary-blue-600: hsl(200, 82%, 39%);
+    --tertiary-blue-700: hsl(201, 80%, 32%);
+    --tertiary-blue-800: hsl(200, 76%, 27%);
+    --tertiary-blue-900: hsl(201, 67%, 24%);
+    --tertiary-blue-950: hsl(204, 68%, 16%);
+
+    /* Tertiary Colors: Red */
+    --tertiary-red-100: hsl(0, 67%, 94%);
+    --tertiary-red-200: hsl(2, 70%, 89%);
+    --tertiary-red-300: hsl(1, 68%, 82%);
+    --tertiary-red-400: hsl(1, 65%, 71%);
+    --tertiary-red-500: hsl(1, 62%, 60%);
+    --tertiary-red-600: hsl(1, 52%, 51%);
+    --tertiary-red-700: hsl(2, 53%, 42%);
+    --tertiary-red-800: hsl(1, 51%, 35%);
+    --tertiary-red-900: hsl(2, 46%, 31%);
+    --tertiary-red-950: hsl(1, 54%, 15%);
+
+    /* Tertiary Colors: Pale */
+    --tertiary-pale-100: hsl(38, 44%, 90%);
+    --tertiary-pale-200: hsl(35, 42%, 83%);
+    --tertiary-pale-300: hsl(34, 43%, 72%);
+    --tertiary-pale-400: hsl(31, 43%, 61%);
+    --tertiary-pale-500: hsl(28, 41%, 53%);
+    --tertiary-pale-600: hsl(24, 40%, 48%);
+    --tertiary-pale-700: hsl(21, 39%, 40%);
+    --tertiary-pale-800: hsl(19, 35%, 34%);
+    --tertiary-pale-900: hsl(20, 32%, 28%);
+    --tertiary-pale-950: hsl(18, 35%, 15%);
+
+    /* Tertiary Colors: White */
+    --tertiary-white-100: hsl(0, 0%, 94%);
+    --tertiary-white-200: hsl(0, 0%, 86%);
+    --tertiary-white-300: hsl(0, 0%, 74%);
+    --tertiary-white-400: hsl(0, 0%, 60%);
+    --tertiary-white-500: hsl(0, 0%, 49%);
+    --tertiary-white-600: hsl(0, 0%, 40%);
+    --tertiary-white-700: hsl(0, 0%, 32%);
+    --tertiary-white-800: hsl(0, 0%, 27%);
+    --tertiary-white-900: hsl(0, 0%, 24%);
+    --tertiary-white-950: hsl(0, 0%, 16%);
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /*background*/
+    --background: var(--tertiary-white-100);
+    /* Primary Colors */
+    --primary-50: hsl(133, 53%, 97%);
+    --primary-100: hsl(135, 63%, 93%);
+    --primary-200: hsl(135, 58%, 85%);
+    --primary-300: hsl(136, 58%, 73%);
+    --primary-400: hsl(136, 51%, 58%);
+    --primary-500: hsl(136, 53%, 43%);
+    --primary-600: hsl(136, 57%, 36%);
+    --primary-700: hsl(136, 53%, 29%);
+    --primary-800: hsl(136, 48%, 24%);
+    --primary-900: hsl(138, 46%, 20%);
+    --primary-950: hsl(139, 61%, 10%);
+
+    /* Secondary Colors */
+    --secondary-50: hsl(57, 92%, 95%);
+    --secondary-100: hsl(57, 97%, 88%);
+    --secondary-200: hsl(55, 98%, 77%);
+    --secondary-300: hsl(53, 98%, 65%);
+    --secondary-400: hsl(50, 96%, 53%);
+    --secondary-500: hsl(48, 93%, 47%);
+    --secondary-600: hsl(43, 96%, 40%);
+    --secondary-700: hsl(37, 92%, 33%);
+    --secondary-800: hsl(34, 81%, 29%);
+    --secondary-900: hsl(30, 73%, 26%);
+    --secondary-950: hsl(28, 83%, 14%);
+    /* Tertiary Colors: Deep Green */
+    --tertiary-deep-green-100: hsl(98, 64%, 89%);
+    --tertiary-deep-green-200: hsl(98, 62%, 80%);
+    --tertiary-deep-green-300: hsl(100, 58%, 67%);
+    --tertiary-deep-green-400: hsl(101, 54%, 55%);
+    --tertiary-deep-green-500: hsl(102, 56%, 44%);
+    --tertiary-deep-green-600: hsl(103, 59%, 35%);
+    --tertiary-deep-green-700: hsl(103, 54%, 27%);
+    --tertiary-deep-green-800: hsl(105, 48%, 23%);
+    --tertiary-deep-green-900: hsl(106, 42%, 20%);
+    --tertiary-deep-green-950: hsl(107, 56%, 10%);
+
+    /* Tertiary Colors: Blue */
+    --tertiary-blue-100: hsl(203, 81%, 94%);
+    --tertiary-blue-200: hsl(201, 80%, 86%);
+    --tertiary-blue-300: hsl(199, 80%, 74%);
+    --tertiary-blue-400: hsl(198, 78%, 64%);
+    --tertiary-blue-500: hsl(198, 74%, 48%);
+    --tertiary-blue-600: hsl(200, 82%, 39%);
+    --tertiary-blue-700: hsl(201, 80%, 32%);
+    --tertiary-blue-800: hsl(200, 76%, 27%);
+    --tertiary-blue-900: hsl(201, 67%, 24%);
+    --tertiary-blue-950: hsl(204, 68%, 16%);
+
+    /* Tertiary Colors: Red */
+    --tertiary-red-100: hsl(0, 67%, 94%);
+    --tertiary-red-200: hsl(2, 70%, 89%);
+    --tertiary-red-300: hsl(1, 68%, 82%);
+    --tertiary-red-400: hsl(1, 65%, 71%);
+    --tertiary-red-500: hsl(1, 62%, 60%);
+    --tertiary-red-600: hsl(1, 52%, 51%);
+    --tertiary-red-700: hsl(2, 53%, 42%);
+    --tertiary-red-800: hsl(1, 51%, 35%);
+    --tertiary-red-900: hsl(2, 46%, 31%);
+    --tertiary-red-950: hsl(1, 54%, 15%);
+
+    /* Tertiary Colors: Pale */
+    --tertiary-pale-100: hsl(38, 44%, 90%);
+    --tertiary-pale-200: hsl(35, 42%, 83%);
+    --tertiary-pale-300: hsl(34, 43%, 72%);
+    --tertiary-pale-400: hsl(31, 43%, 61%);
+    --tertiary-pale-500: hsl(28, 41%, 53%);
+    --tertiary-pale-600: hsl(24, 40%, 48%);
+    --tertiary-pale-700: hsl(21, 39%, 40%);
+    --tertiary-pale-800: hsl(19, 35%, 34%);
+    --tertiary-pale-900: hsl(20, 32%, 28%);
+    --tertiary-pale-950: hsl(18, 35%, 15%);
+
+    /* Tertiary Colors: White */
+    --tertiary-white-100: hsl(0, 0%, 94%);
+    --tertiary-white-200: hsl(0, 0%, 86%);
+    --tertiary-white-300: hsl(0, 0%, 74%);
+    --tertiary-white-400: hsl(0, 0%, 60%);
+    --tertiary-white-500: hsl(0, 0%, 49%);
+    --tertiary-white-600: hsl(0, 0%, 40%);
+    --tertiary-white-700: hsl(0, 0%, 32%);
+    --tertiary-white-800: hsl(0, 0%, 27%);
+    --tertiary-white-900: hsl(0, 0%, 24%);
+    --tertiary-white-950: hsl(0, 0%, 16%);
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+ul.list-decimal ::marker {
+  font-size: 0.75rem /* 12px */;
+  line-height: 1rem /* 16px */;
+  color: #31302e;
+}
+/** Used to define container behavior: width, position: fixed etc... **/
+.Toastify__toast-container {
+  border-radius: 8px;
+  min-width: 450px !important;
+  background: transparent !important;
+  right: 112px !important;
+  top: 50px !important;
+  z-index: 10000000000 !important;
+}
+
+.Toastify__toast {
+  width: 100%;
+  padding: 16px !important;
+  /* height: 94px; */
+  margin-bottom: 0px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08);
+}
+
+.Toastify__toast.Toastify__toast--error {
+  @apply bg-[#fef6f6] !important;
+}
+
+.Toastify__toast.Toastify__toast--success {
+  @apply bg-[#F4FBF7] !important;
+}
+
+.Toastify__toast-body {
+  gap: 24px;
+  padding: 8px !important;
+  width: calc(100% - 24px);
+}
+
+.Toastify__toast-icon {
+  width: 28px !important;
+  height: 28px;
+  -webkit-margin-end: 0px !important;
+  margin-inline-end: 0px !important;
+}
+
+/* Todo: convert to tailwind */
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: transparent !important;
+  border-radius: 3px 0 0 0;
+}
+
+.opt-container {
+  @apply mb-8 mt-4 flex justify-between gap-2;
+}
+.opt-container input {
+  @apply !mr-0 !h-[58px] w-[44px] flex-1 rounded-lg bg-[rgba(222,_242,_251,_0.30)] py-5 outline-none ring-1 ring-[#C8C8C8] transition-all duration-300 ease-in-out focus-within:shadow-lg focus-within:ring-primary-500;
+}
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: transparent !important;
+}
+
+button.slick-arrow,
+button.slick-prev,
+button.slick-next {
+  display: none !important;
+}
+ul.slick-dots {
+  padding: 0;
+  margin: 0;
+}
+ul.slick-dots li button::before {
+  display: none;
+}
+ul.slick-dots li button {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+ul.slick-dots li.slick-active button {
+  background-color: #34a853;
+  outline: 3px solid #fde74c;
+}
+
+.range-thumb::-webkit-slider-thumb {
+  background-color: green !important; /* Green background */
+  border: 2px solid yellow !important ; /* Yellow border */
+}
+
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
+}
+.places-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 300px;
+  background-color: white;
+}
+
+.map-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.combobox-input {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.QuillWrapperC {
+  height: 170px;
+  width: 100%;
+}
+
+.QuillWrapperC > div.quill {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.QuillWrapperC > div.quill.error {
+  border-color: var(--tertiary-red-500);
+  border-width: 1px;
+  border-style: solid;
+}
+
+.QuillWrapperC > div.quill > div.ql-toolbar {
+  border-radius: 8px 8px 0px 0px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.QuillWrapperC > div.quill.error > div.ql-toolbar {
+  border-color: var(--tertiary-red-500);
+  border-width: 1px;
+  border-style: solid;
+}
+
+.QuillWrapperC > div.quill > div.ql-container {
+  border: none;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.QuillWrapperC > div.quill:focus-within {
+  border-width: 2px;
+  border-color: var(--primary-500);
+}
+
+.QuillWrapperC > div.quill:focus-within > div.ql-toolbar {
+  border-width: 2px;
+  border-color: var(--primary-500);
+}
+
+@media (max-width: 767px) {
+  .Toastify__toast-container {
+    border-radius: unset;
+    min-width: unset !important;
+    background: unset !important;
+    right: 0px !important;
+    top: 0px !important;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .slides-container {
+    display: none !important;
+  }
+}
+@media screen and (max-height: 650px) {
+  .indicator {
+    display: none;
+  }
+}
+@media screen and (max-height: 750px) {
+  .authWrapperSliderCard {
+    padding-bottom: 0;
+  }
+  .authWrapperSliderCard .imageWraper {
+    height: 300px;
+  }
+  .authWrapperSliderCard .imageWraper .image {
+    height: 300px;
+    width: auto;
+  }
+}
+
+#zsiq_float {
+  position: fixed !important;
+  bottom: 50px !important;
+  right: 10px !important;
+}

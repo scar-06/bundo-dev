@@ -1,0 +1,14 @@
+.aboutHeroContainer {
+  width: 100%;
+  height: fit-content;
+  min-height: 735px;
+  background: url("../../../../assets/images/aboutHeroPattern.png");
+  background-size: contain;
+  background-color: #1a542a;
+}
+
+@media (max-width: 767px) {
+  .heroContainer {
+    background-size: cover;
+  }
+}

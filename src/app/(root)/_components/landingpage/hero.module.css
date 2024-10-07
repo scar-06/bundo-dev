@@ -1,0 +1,23 @@
+.heroContainer {
+  width: 100%;
+  height: fit-content;
+  min-height: 735px;
+  background: url("../../../../assets/images/heroBgPattern.png");
+  background-size: contain;
+  background-color: hsl(107, 56%, 10%);
+}
+
+.getStarted {
+  background: url("../../../../assets/images/getStartedPattern.png");
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .heroContainer {
+    background-size: cover;
+  }
+  .getStarted {
+    background: url("../../../../assets/images/bundoPatterns.png");
+    background-size: cover;
+  }
+}
