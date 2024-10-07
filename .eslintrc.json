@@ -1,0 +1,89 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "next"
+  ],
+  "plugins": ["react", "jsx-a11y", "@typescript-eslint"],
+  "ignorePatterns": ["**/*.css", "**/*.scss"],
+  "rules": {
+    "semi": ["off"],
+    "global-require": "off",
+    "@typescript-eslint/no-unsafe-declaration-merging": "off",
+    "import/no-unresolved": "off",
+    "max-classes-per-file": "off",
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "non-nullish": "off",
+    "react/prop-types": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/button-has-type": "off",
+    "no-nested-ternary": "off",
+    "import/no-cycle": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "no-prototype-builtins": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "@next/next/no-async-client-component": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "consistent-retur": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "import/prefer-default-export": "off",
+    "react/require-default-props": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "off",
+    "react/jsx-curly-brace-presence": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "consistent-return": "off",
+    "no-plusplus": "off",
+    "no-console": "off",
+    "func-names": "off",
+    "react/no-danger": "off",
+    "no-shadow": "off",
+    "no-param-reassign": "off",
+    "no-unused-expressions": "off",
+    "no-return-await": "off",
+    "no-restricted-exports": "off",
+    "no-return-assign": "off",
+    "no-use-before-define": "off",
+    "react/no-array-index-key": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "jsx-a11y/media-has-caption": "off",
+    "arrow-body-style": "off",
+    "no-alert": "off",
+    "prefer-template": "off",
+    "react/destructuring-assignment": "off",
+    "no-useless-return": "off",
+    "no-restricted-syntax": "off",
+    "camelcase": "off",
+    "no-else-return": "off",
+    "no-underscore-dangle": "off",
+    "object-shorthand": "off",
+    "no-unsafe-optional-chaining": "off",
+    "react/react-in-jsx-scope": "off", // Disable if using Next.js 13's app directory
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx", ".ts"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {} // Enable TypeScript path aliases
+    }
+  }
+}
