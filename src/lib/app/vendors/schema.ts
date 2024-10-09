@@ -28,7 +28,6 @@ export const createStoreValidationSchema = Yup.object().shape({
 export const updateStoreValidationSchema = Yup.object().shape({
   business_profile_picture: Yup.string().optional(),
   description: Yup.string().required("Description is required"),
-  daysUntilPickup: Yup.string().required("Days until pickup is required"),
   address: Yup.string().required("Address is required"),
   lat: Yup.string().optional(),
   long: Yup.string().optional(),

@@ -11,7 +11,6 @@ import { useStore } from "zustand";
 
 import { Business, getBusiness, Product } from "@/lib/app/vendors/services";
 import { generateChecklist } from "@/lib/utils";
-import { useGetLoggedInUser } from "@/hooks/useGetLoggedInUser";
 import { Button } from "@/components/ui/button";
 import { Modal } from "@/components/ui/modal";
 
@@ -24,7 +23,6 @@ type Props = {
 };
 
 function VendorServiceGridItemCard({ state, product }: Props) {
-  useGetLoggedInUser();
   const user = useStore(useUserStore, (state) => state.user);
   const data = useStore(useVendorBusinessStore, (state) => state.business);
   const checkList = generateChecklist(

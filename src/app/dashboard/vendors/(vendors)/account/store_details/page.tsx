@@ -80,7 +80,6 @@ function StoreDetails() {
       onSuccess: (data) => {
         if (data?.status === "success") {
           notify.success({ message: "Store updated successfully" });
-          console.log("Upload successful");
           queryClient.invalidateQueries({ queryKey: [QUERY_KEYS.BUSINESS] });
           router.push(`/dashboard/vendors`);
         }
@@ -130,10 +129,6 @@ function StoreDetails() {
         address: business?.business.address,
         business_profile_picture: business?.business.business_profile_picture,
         description: business?.business.description ?? "",
-        ...(businessType !== "services" && {
-          daysUntilPickup:
-            business?.business?.daysUntilPickup?.toString() ?? "",
-        }),
         categories:
           business?.business?.categories.map((category) => ({
             label: category,
@@ -175,7 +170,6 @@ function StoreDetails() {
       description,
       cacDoc,
       categories,
-      daysUntilPickup,
       business_profile_picture,
       ...rest
     } = formData;
@@ -195,7 +189,6 @@ function StoreDetails() {
       description,
       lat: selectedLocation?.lat.toString() ?? "",
       long: selectedLocation?.lng.toString() ?? "",
-      ...(businessType !== "services" && { daysUntilPickup }),
       business_profile_picture: uploadUrl,
       address: place?.formatted_address as string,
       categories: categories?.map((c) => c.value),
@@ -284,7 +277,9 @@ function StoreDetails() {
           <FormProvider {...methods}>
             <form
               className="mt-5 flex flex-col gap-6"
-              onSubmit={methods.handleSubmit(onSubmit)}
+              onSubmit={methods.handleSubmit(onSubmit, (err) =>
+                console.log(err),
+              )}
             >
               <AccordionInputWrapper
                 isError={methods.watch("description")?.length < 1}
@@ -297,20 +292,6 @@ function StoreDetails() {
                   maxLength={150}
                 />
               </AccordionInputWrapper>
-
-              {businessType !== "services" && (
-                <AccordionInputWrapper
-                  isError={methods.watch("daysUntilPickup")?.length < 1}
-                  title="Days until pickup"
-                >
-                  <FormTextInput
-                    name="daysUntilPickup"
-                    labelText=""
-                    placeholder="1"
-                    type="number"
-                  />
-                </AccordionInputWrapper>
-              )}
 
               <AccordionInputWrapper
                 isError={!selectedLocation?.lat}

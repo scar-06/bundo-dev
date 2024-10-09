@@ -80,7 +80,6 @@ function SignUp() {
     }
   }, [isOtpVerified]);
 
-  console.log(data);
   return (
     <AuthWrapper hideSlider wrapperFor="buyer">
       <div className="mx-[auto] mb-[64px]  flex h-fit w-full max-w-[489px] flex-col rounded-3xl bg-white px-[14px] py-[29px]">

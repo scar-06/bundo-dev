@@ -16,7 +16,7 @@ import { useGetLoggedInUser } from "@/hooks/useGetLoggedInUser";
 import VendorStoreCard from "../_components/vendorStoreCard";
 
 function VendorsStoreFrontLayout({ children }: { children: React.ReactNode }) {
-  const { isSuccess: isGettedLoggedUser, isFetching } = useGetLoggedInUser();
+  useGetLoggedInUser();
 
   const loc = usePathname();
   const isInnerPage = loc.split("/").length > 3;

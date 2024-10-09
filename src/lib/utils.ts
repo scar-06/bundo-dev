@@ -82,10 +82,7 @@ export function generateChecklist(
 
   // 3. Complete Store settings
   const isStoreSettingsComplete = (() => {
-    if (
-      !businessInfo?.address ||
-      (!businessInfo?.daysUntilPickup && businessInfo?.type !== "services")
-    ) {
+    if (!businessInfo?.address) {
       return "pending";
     }
     return "completed";
