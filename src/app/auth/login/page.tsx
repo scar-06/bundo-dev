@@ -93,7 +93,7 @@ function Login() {
               Welcome Back!
             </h3>
             <span className="mx-auto text-xs font-light">
-              Continue enjoying buying with ease
+              Pick up from where you left
             </span>
             <div className="mx-auto my-6 flex w-11/12 flex-col gap-6">
               <FormTextInput
